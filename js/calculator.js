@@ -3,56 +3,63 @@
 console.log("SANITY");
 
 function Calculator() {
- var _memory = 0;
- var _total = 0;
- var _balance = 0;
- var _operator = null;
- clear();
+  var _memory = 0;
+  var _total = 0;
+  var _balance = 0;
+  var _operator = null;
+  clear();
 
- function load(x) {
-   _total = x;
- }
+  function load(x) {
+    _total = x;
+  }
 
- function deposit(x) {
-   _balance += x;
- }
+  function deposit(x) {
+    _balance += x;
+    display.innerHTML = _balance;
+    clear();
+    return _balance;
+  }
 
- function getBalance() {
-   return _balance;
- }
+  function withdraw(x) {
+    _balance -= x;
+    clear();
+    return _balance;
+  }
 
- function equals() {
+  function getBalance() {
+    clear();
+    display.innerHTML = _balance;
+    return _balance;
+  }
+
+  function equals() {
    // if (_memory === _total){
    // _memory = parseFloat(display.innerHTML);
    // }
-   _memory = parseFloat(display.innerHTML);
-   if (_operator === add){
-     _total += _memory;
-   }else
-   if (_operator === subtract){
-     _total -= _memory;
-   }else
-   if (_operator === multiply){
-     _total = _total * _memory;
-   }else
-   if (_operator === divide){
-     _total = _total / _memory;
-   }else{
-     _total = _memory;
-   }
+    _memory = parseFloat(display.innerHTML);
+    if (_operator === add){
+      _total += _memory;
+    }else
+    if (_operator === subtract){
+      _total -= _memory;
+    }else
+    if (_operator === multiply){
+      _total = _total * _memory;
+    }else
+    if (_operator === divide){
+      _total = _total / _memory;
+    }else{
+      _total = _memory;
+    }
 
-   console.log(_operator);
-   display.innerHTML = _total;
-   _operator = null;
+    console.log(_operator);
+    display.innerHTML = _total;
+    _operator = null;
 
-   return _total;
- }
+    return _total;
+  }
 
- function withdraw(x) {
-   _balance -= x;
- }
-
- //MATH FUNCTIONS
+//MATH FUNCTIONS
 
  function add() {
    if (_operator !== null) {
