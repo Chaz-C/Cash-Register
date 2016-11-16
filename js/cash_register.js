@@ -10,6 +10,12 @@ zero.addEventListener('click',function() {
   }
 });
 
+doubleZero.addEventListener('click',function() {
+  clearDisplay();
+  display.innerHTML += '00';
+  answer = false;
+});
+
 one.addEventListener('click',function() {
   clearDisplay();
   display.innerHTML += 1;
@@ -146,9 +152,13 @@ equals.addEventListener('click', function() {
 
 getBalance.addEventListener('click', myCalc.getBalance);
 
-depositCash.addEventListener('click', myCalc.depositCash);
+depositCash.addEventListener('click', function() {
+  myCalc.deposit(parseFloat(display.innerHTML));
+});
 
-withdrawCash.addEventListener('click', myCalc.withdrawCash);
+withdrawCash.addEventListener('click', function() {
+  myCalc.withdraw(parseFloat(display.innerHTML));
+});
 
 function clearDisplay() {
  console.log(answer);
@@ -156,3 +166,4 @@ function clearDisplay() {
    display.innerHTML = null;
  }
 }
+
