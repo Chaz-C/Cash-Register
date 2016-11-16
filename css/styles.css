@@ -16,8 +16,8 @@
   border-radius: 0px;
   background-color: black;
   color: green;
-  font-family: 'Segment7Standard';
-  font-size: 30px;
+  font-family: /*'Segment7Standard'*/ 'LaylaDigitalRegular';
+  font-size: 35px;
   border-color: #404141;
   height: 40px;
 }
@@ -37,21 +37,33 @@ td {
 #clear {
   background-color: white;
   width: 100px;
+  font-family: 'Play';
+  font-size: 12px;
+  font-weight: bold;
 }
 
 #depositCash {
   background-color: #338A2E;
   width: 100px;
+  font-family: 'Play';
+  font-size: 12px;
+  font-weight: bold;
 }
 
 #withdrawCash {
   background-color: #AA3C39;
   width: 100px;
+  font-family: 'Play';
+  font-size: 12px;
+  font-weight: bold;
 }
 
 #getBalance {
   background-color: #33AEAE;
   width: 100px;
+  font-family: 'Play';
+  font-size: 12px;
+  font-weight: bold;
 }
 
 td:hover, #depositCash:hover, #withdrawCash:hover, #getBalance:hover {
@@ -66,4 +78,10 @@ td:hover, #depositCash:hover, #withdrawCash:hover, #getBalance:hover {
 
 .hiddenCell {
   empty-cells: hide;
+}
+
+#display:before {
+  font-family: 'LaylaDigitalRegular';
+  content: '$ ';
+  font-size: 35px;
 }
