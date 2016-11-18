@@ -1,15 +1,11 @@
-/*#calc, tr, td{
-  border: solid black 1px;
-  text-align: center;
-  padding: 10px;
-  border-spacing: 5px 5px;
-}*/
+
 
 #calc {
   border: solid black 1px;
   border-spacing: 5px 5px;
   border-radius: 5px;
   background-color: #181818;
+  margin: auto;
 }
 
 #display {
